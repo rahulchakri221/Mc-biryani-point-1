@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M C Biryani Point | Badvel</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#090909;
+  color:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(0,0,0,.85);
+  border-bottom:1px solid #333;
+}
+
+nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#d6a84f;
+}
+
+.logo small{
+  display:block;
+  font-size:8px;
+  letter-spacing:4px;
+  color:#fff;
+  text-align:center;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.navlinks a{
+  color:#ddd;
+  font-size:14px;
+}
+
+.navlinks a:hover{
+  color:#d6a84f;
+}
+
+.cart-btn{
+  background:#d6a84f;
+  color:#000 !important;
+  padding:10px 16px;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35)),
+  url("https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-content{
+  max-width:700px;
+  padding-top:70px;
+}
+
+.hero small{
+  color:#d6a84f;
+  letter-spacing:4px;
+}
+
+.hero h1{
+  font-size:clamp(55px,9vw,100px);
+  line-height:.9;
+  margin:20px 0;
+}
+
+.hero h1 span{
+  color:#d6a84f;
+}
+
+.hero p{
+  max-width:550px;
+  line-height:1.8;
+  color:#ddd;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:30px;
+  display:inline-block;
+  font-weight:bold;
+}
+
+.primary{
+  background:#d6a84f;
+  color:#000;
+}
+
+.secondary{
+  border:1px solid #777;
+  color:#fff;
+}
+
+/* SECTION */
+
+section{
+  padding:90px 0;
+}
+
+.heading{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.heading small{
+  color:#d6a84f;
+  letter-spacing:4px;
+}
+
+.heading h2{
+  font-family:Georgia,serif;
+  font-size:50px;
+  margin-top:10px;
+}
+
+.heading p{
+  color:#aaa;
+  margin-top:15px;
+}
+
+/* FEATURES */
+
+.features{
+  background:#111;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.feature{
+  text-align:center;
+  padding:30px 15px;
+  border:1px solid #292929;
+  border-radius:15px;
+}
+
+.feature-icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.feature h3{
+  color:#d6a84f;
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:#999;
+  font-size:13px;
+}
+
+/* MENU */
+
+.search{
+  display:block;
+  width:100%;
+  max-width:500px;
+  margin:0 auto 25px;
+  padding:14px 20px;
+  border-radius:30px;
+  border:1px solid #444;
+  background:#151515;
+  color:#fff;
+  outline:none;
+}
+
+.categories{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:35px;
+}
+
+.category{
+  padding:10px 18px;
+  border:1px solid #555;
+  background:transparent;
+  color:#fff;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.category.active,
+.category:hover{
+  background:#d6a84f;
+  color:#000;
+  border-color:#d6a84f;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.food{
+  background:#141414;
+  border:1px solid #292929;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.food-image{
+  height:230px;
+}
+
+.food-image img{
+  height:100%;
+}
+
+.food-info{
+  padding:20px;
+}
+
+.food-info h3{
+  font-family:Georgia,serif;
+  font-size:25px;
+}
+
+.food-info p{
+  color:#999;
+  font-size:13px;
+  line-height:1.6;
+  margin:8px 0 18px;
+}
+
+.food-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.price{
+  color:#d6a84f;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.add{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#d6a84f;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* OFFER */
+
+.offer{
+  background:linear-gradient(90deg,#681414,#190909);
+}
+
+.offer-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.offer h2{
+  font-family:Georgia,serif;
+  font-size:55px;
+}
+
+.offer p{
+  color:#ddd;
+  margin-top:10px;
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-image{
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.about-image img{
+  height:500px;
+}
+
+.about-text small{
+  color:#d6a84f;
+  letter-spacing:4px;
+}
+
+.about-text h2{
+  font-family:Georgia,serif;
+  font-size:55px;
+  margin:15px 0 20px;
+}
+
+.about-text p{
+  color:#aaa;
+  line-height:1.9;
+  margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.gallery div{
+  height:250px;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.gallery img{
+  height:100%;
+  transition:.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.08);
+}
+
+/* REVIEWS */
+
+.reviews{
+  background:#111;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.review{
+  background:#171717;
+  border:1px solid #292929;
+  padding:25px;
+  border-radius:15px;
+}
+
+.stars{
+  color:#d6a84f;
+  margin-bottom:15px;
+}
+
+.review p{
+  color:#bbb;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:#141414;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:30px;
+}
+
+.contact-card h3{
+  color:#d6a84f;
+  font-size:25px;
+  margin-bottom:20px;
+}
+
+.contact-card p{
+  color:#aaa;
+  line-height:1.8;
+}
+
+.contact-button{
+  margin-top:20px;
+  display:inline-block;
+  background:#d6a84f;
+  color:#000;
+  padding:13px 20px;
+  border-radius:25px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+  background:#050505;
+  padding:50px 0;
+  text-align:center;
+  border-top:1px solid #222;
+}
+
+footer h2{
+  color:#d6a84f;
+  margin-bottom:10px;
+}
+
+footer p{
+  color:#777;
+}
+
+/* CART */
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  z-index:1999;
+  display:none;
+}
+
+.overlay.show{
+  display:block;
+}
+
+.cart{
+  position:fixed;
+  right:-420px;
+  top:0;
+  width:400px;
+  max-width:100%;
+  height:100vh;
+  background:#111;
+  z-index:2000;
+  transition:.3s;
+  display:flex;
+  flex-direction:column;
+}
+
+.cart.show{
+  right:0;
+}
+
+.cart-header{
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #333;
+}
+
+.close{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:25px;
+  cursor:pointer;
+}
+
+.cart-items{
+  flex:1;
+  overflow:auto;
+  padding:20px;
+}
+
+.cart-item{
+  padding:15px 0;
+  border-bottom:1px solid #292929;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.cart-item h4{
+  font-size:14px;
+}
+
+.cart-item p{
+  color:#d6a84f;
+  margin-top:5px;
+}
+
+.quantity{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:8px;
+}
+
+.quantity button{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border:1px solid #555;
+  background:#222;
+  color:#fff;
+  cursor:pointer;
+}
+
+.cart-footer{
+  padding:20px;
+  border-top:1px solid #333;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
+
+.whatsapp{
+  width:100%;
+  padding:15px;
+  background:#25d366;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* FLOATING */
+
+.floating{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  z-index:1500;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+}
+
+.call{
+  background:#d6a84f;
+  color:#000;
+}
+
+.whats{
+  background:#25d366;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .menu-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .offer-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:58px;
+  }
+
+  .heading h2{
+    font-size:40px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .menu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery div{
+    height:180px;
+  }
+
+  .about-image img{
+    height:350px;
+  }
+
+  .offer h2{
+    font-size:45px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<nav>
+
+<a href="#home" class="logo">
+MC
+<small>BIRIYANI POINT</small>
+</a>
+
+<div class="navlinks">
+
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+<a href="#menu" class="cart-btn">
+Order Now 🛒
+<span id="cartCount">0</span>
+</a>
+
+</div>
+
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<small>BADVEL • ANDHRA PRADESH</small>
+
+<h1>
+M C<br>
+<span>Biryani</span><br>
+Point
+</h1>
+
+<p>
+Authentic flavours, aromatic biryani and delicious
+food made to satisfy every craving.
+</p>
+
+<div class="buttons">
+
+<a href="#menu" class="btn primary">
+🍽️ Explore Menu
+</a>
+
+<a href="tel:+919966165174" class="btn secondary">
+📞 Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="container">
+
+<div class="feature-grid">
+
+<div class="feature">
+<div class="feature-icon">🍗</div>
+<h3>Delicious Food</h3>
+<p>Rich and satisfying flavours.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🔥</div>
+<h3>Freshly Prepared</h3>
+<p>Hot food prepared for every order.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">👨‍🍳</div>
+<h3>Made With Care</h3>
+<p>Food prepared with attention.</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">📍</div>
+<h3>Badvel</h3>
+<p>Located in Vinayaka Nagar.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+<div class="container">
+
+<div class="heading">
+
+<small>OUR MENU</small>
+
+<h2>Taste The Difference</h2>
+
+<p>
+Sample menu — replace these items and prices
+with the restaurant's confirmed menu.
+</p>
+
+</div>
+
+<input
+class="search"
+id="search"
+placeholder="🔎 Search food..."
+oninput="displayMenu()"
+>
+
+<div class="categories">
+
+<button class="category active"
+onclick="filterCategory('All',this)">
+All
+</button>
+
+<button class="category"
+onclick="filterCategory('Biryani',this)">
+Biryani
+</button>
+
+<button class="category"
+onclick="filterCategory('Starters',this)">
+Starters
+</button>
+
+<button class="category"
+onclick="filterCategory('Rice',this)">
+Rice
+</button>
+
+<button class="category"
+onclick="filterCategory('Noodles',this)">
+Noodles
+</button>
+
+</div>
+
+<div class="menu-grid" id="menuGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section class="offer">
+
+<div class="container">
+
+<div class="offer-box">
+
+<div>
+
+<h2>Craving Biryani?</h2>
+
+<p>
+Choose your favourite food and order directly.
+</p>
+
+</div>
+
+<a href="#menu" class="btn primary">
+ORDER NOW →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1000&q=80"
+alt="Biryani">
+
+</div>
+
+<div class="about-text">
+
+<small>ABOUT US</small>
+
+<h2>
+Made For<br>
+Biryani Lovers.
+</h2>
+
+<p>
+Welcome to M C Biryani Point in Badvel,
+Andhra Pradesh.
+</p>
+
+<p>
+Explore our menu, discover your favourites
+and contact the restaurant directly.
+</p>
+
+<a href="#contact" class="btn primary">
+Visit Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="heading">
+
+<small>GALLERY</small>
+
+<h2>A Taste Of What Awaits</h2>
+
+</div>
+
+<div class="gallery">
+
+<div>
+<img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=800&q=80">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<div class="container">
+
+<div class="heading">
+
+<small>CUSTOMER LOVE</small>
+
+<h2>What People Say</h2>
+
+<p>
+Replace these sample reviews with verified
+restaurant reviews before launch.
+</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+Add an actual Google customer review here.
+</p>
+
+<strong>— Customer</strong>
+
+</div>
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+Add another verified customer review here.
+</p>
+
+<strong>— Customer</strong>
+
+</div>
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+Add the restaurant's best customer review here.
+</p>
+
+<strong>— Customer</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="heading">
+
+<small>VISIT US</small>
+
+<h2>Find M C Biryani Point</h2>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Restaurant Details</h3>
+
+<p>
+<strong>M C Biryani Point</strong>
+</p>
+
+<br>
+
+<p>
+📍 Siddavatam Road,<br>
+Vinayaka Nagar,<br>
+Badvel, Kadapa,<br>
+Andhra Pradesh - 516233
+</p>
+
+<br>
+
+<p>
+📞 +91 99661 65174
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=M%20C%20Biryani%20Point%20Badvel"
+target="_blank"
+class="contact-button">
+📍 Get Directions
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>Contact & Order</h3>
+
+<p>
+Call the restaurant directly or place
+your food enquiry/order through WhatsApp.
+</p>
+
+<a
+href="tel:+919966165174"
+class="contact-button">
+📞 Call Now
+</a>
+
+<br><br>
+
+<a
+href="https://wa.me/919966165174"
+target="_blank"
+class="contact-button"
+style="background:#25d366;">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<h2>M C BIRYANI POINT</h2>
+
+<p>
+Siddavatam Road • Vinayaka Nagar • Badvel
+</p>
+
+<br>
+
+<p>
+© 2026 M C Biryani Point. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+
+<div
+class="overlay"
+id="overlay"
+onclick="closeCart()">
+</div>
+
+
+<!-- CART -->
+
+<div class="cart" id="cart">
+
+<div class="cart-header">
+
+<h2>Your Order</h2>
+
+<button class="close" onclick="closeCart()">
+×
+</button>
+
+</div>
+
+<div class="cart-items" id="cartItems">
+</div>
+
+<div class="cart-footer">
+
+<div class="total">
+
+<strong>Total</strong>
+
+<strong id="total">
+₹0
+</strong>
+
+</div>
+
+<button
+class="whatsapp"
+onclick="sendWhatsApp()">
+💬 ORDER ON WHATSAPP
+</button>
+
+</div>
+
+</div>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+<a
+href="tel:+919966165174"
+class="float call">
+📞
+</a>
+
+<a
+href="https://wa.me/919966165174"
+target="_blank"
+class="float whats">
+💬
+</a>
+
+</div>
+
+
+<script>
+
+/* MENU */
+
+const menu = [
+
+{
+id:1,
+name:"Chicken Biryani",
+category:"Biryani",
+price:180,
+description:"Aromatic rice with flavorful chicken.",
+image:"https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:2,
+name:"Special Chicken Biryani",
+category:"Biryani",
+price:220,
+description:"Rich and flavorful biryani.",
+image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:3,
+name:"Mutton Biryani",
+category:"Biryani",
+price:260,
+description:"Tender mutton with aromatic rice.",
+image:"https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:4,
+name:"Chicken 65",
+category:"Starters",
+price:160,
+description:"Crispy and spicy chicken starter.",
+image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:5,
+name:"Chilli Chicken",
+category:"Starters",
+price:170,
+description:"Spicy chicken with peppers.",
+image:"https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:6,
+name:"Chicken Fried Rice",
+category:"Rice",
+price:150,
+description:"Fragrant fried rice with chicken.",
+image:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:7,
+name:"Egg Fried Rice",
+category:"Rice",
+price:120,
+description:"Classic fried rice with egg.",
+image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:8,
+name:"Chicken Noodles",
+category:"Noodles",
+price:150,
+description:"Wok tossed noodles with chicken.",
+image:"https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=800&q=80"
+},
+
+{
+id:9,
+name:"Egg Noodles",
+category:"Noodles",
+price:120,
+description:"Classic noodles with egg.",
+image:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+}
+
+];
+
+let selectedCategory="All";
+
+let cart=[];
+
+
+/* DISPLAY MENU */
+
+function displayMenu(){
+
+const grid=document.getElementById("menuGrid");
+
+const search=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+const filtered=menu.filter(item=>{
+
+const categoryOK=
+selectedCategory==="All" ||
+item.category===selectedCategory;
+
+const searchOK=
+item.name.toLowerCase().includes(search);
+
+return categoryOK && searchOK;
+
+});
+
+grid.innerHTML="";
+
+filtered.forEach(item=>{
+
+grid.innerHTML+=`
+
+<div class="food">
+
+<div class="food-image">
+
+<img
+src="${item.image}"
+alt="${item.name}"
+loading="lazy">
+
+</div>
+
+<div class="food-info">
+
+<h3>${item.name}</h3>
+
+<p>${item.description}</p>
+
+<div class="food-bottom">
+
+<div class="price">
+₹${item.price}
+</div>
+
+<button
+class="add"
+onclick="addToCart(${item.id})">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+/* FILTER */
+
+function filterCategory(category,button){
+
+selectedCategory=category;
+
+document
+.querySelectorAll(".category")
+.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+displayMenu();
+
+}
+
+
+/* ADD CART */
+
+function addToCart(id){
+
+const item=menu.find(x=>x.id===id);
+
+const existing=cart.find(x=>x.id===id);
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+...item,
+quantity:1
+});
+
+}
+
+updateCart();
+
+openCart();
+
+}
+
+
+/* UPDATE CART */
+
+function updateCart(){
+
+const items=document.getElementById("cartItems");
+
+const count=document.getElementById("cartCount");
+
+const totalElement=document.getElementById("total");
+
+let total=0;
+
+let countTotal=0;
+
+items.innerHTML="";
+
+if(cart.length===0){
+
+items.innerHTML=`
+<p style="color:#777;text-align:center;margin-top:50px;">
+Your cart is empty.
+</p>
+`;
+
+}else{
+
+cart.forEach(item=>{
+
+const subtotal=
+item.price*item.quantity;
+
+total+=subtotal;
+
+countTotal+=item.quantity;
+
+items.innerHTML+=`
+
+<div class="cart-item">
+
+<div>
+
+<h4>${item.name}</h4>
+
+<p>₹${item.price}</p>
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(${item.id},-1)">
+-
+</button>
+
+<span>${item.quantity}</span>
+
+<button
+onclick="changeQuantity(${item.id},1)">
++
+</button>
+
+</div>
+
+</div>
+
+<strong>
+₹${subtotal}
+</strong>
+
+</div>
+
+`;
+
+});
+
+}
+
+count.innerText=countTotal;
+
+totalElement.innerText="₹"+total;
+
+}
+
+
+/* QUANTITY */
+
+function changeQuantity(id,value){
+
+const item=cart.find(x=>x.id===id);
+
+if(!item)return;
+
+item.quantity+=value;
+
+if(item.quantity<=0){
+
+cart=cart.filter(x=>x.id!==id);
+
+}
+
+updateCart();
+
+}
+
+
+/* OPEN CART */
+
+function openCart(){
+
+document
+.getElementById("cart")
+.classList.add("show");
+
+document
+.getElementById("overlay")
+.classList.add("show");
+
+}
+
+
+/* CLOSE CART */
+
+function closeCart(){
+
+document
+.getElementById("cart")
+.classList.remove("show");
+
+document
+.getElementById("overlay")
+.classList.remove("show");
+
+}
+
+
+/* WHATSAPP */
+
+function sendWhatsApp(){
+
+if(cart.length===0){
+
+alert("Please add food items first.");
+
+return;
+
+}
+
+let message=
+"Hello M C Biryani Point!%0A%0A";
+
+message+="*New Order*%0A%0A";
+
+let total=0;
+
+cart.forEach(item=>{
+
+const subtotal=
+item.price*item.quantity;
+
+total+=subtotal;
+
+message+=
+item.name+
+" x "+
+item.quantity+
+" = ₹"+
+subtotal+
+"%0A";
+
+});
+
+message+=
+"%0A*Total: ₹"+
+total+
+"*%0A%0A";
+
+message+=
+"Name: %0A";
+
+message+=
+"Pickup/Delivery: %0A";
+
+message+=
+"Address: %0A";
+
+const phone="919966165174";
+
+const url=
+"https://wa.me/"+
+phone+
+"?text="+
+message;
+
+window.open(url,"_blank");
+
+}
+
+
+/* START */
+
+displayMenu();
+
+updateCart();
+
+</script>
+
+</body>
+  </html>
